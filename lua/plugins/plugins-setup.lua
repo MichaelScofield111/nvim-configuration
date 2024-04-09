@@ -44,6 +44,10 @@ return require('packer').startup(function(use)
   
   use "numToStr/Comment.nvim" -- gcc和gc注释
 
+  use {
+  'nvim-telescope/telescope.nvim', tag = '0.1.6',
+  requires = { {'nvim-lua/plenary.nvim'} }
+}
 
 
 if packer_bootstrap then
