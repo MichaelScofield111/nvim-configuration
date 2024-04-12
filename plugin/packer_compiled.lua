@@ -89,10 +89,20 @@ _G.packer_plugins = {
     path = "/Users/qianbao/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["competitest.nvim"] = {
+    loaded = true,
+    path = "/Users/qianbao/.local/share/nvim/site/pack/packer/start/competitest.nvim",
+    url = "https://github.com/xeluxee/competitest.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/qianbao/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/Users/qianbao/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
