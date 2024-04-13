@@ -10,6 +10,11 @@ opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
 
+-- 设置 C 语言格式缩进
+vim.opt.cindent = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+
 -- 防止包裹
 opt.wrap = false
 
@@ -33,4 +38,11 @@ opt.smartcase = true
 -- 主题
 opt.termguicolors = true
 opt.signcolumn = "yes"
+
+
+-- 自动缩进和C语言缩进
+vim.api.nvim_exec([[
+    autocmd FileType * setlocal autoindent
+    autocmd FileType c,cpp setlocal cindent
+]], false)
 

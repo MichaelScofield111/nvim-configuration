@@ -36,8 +36,6 @@ return require('packer').startup(function(use)
     }
   }
   use "christoomey/vim-tmux-navigator" -- 用ctl-hjkl来定位窗口
-  use "nvim-treesitter/nvim-treesitter" -- 语法高亮
-  use "p00f/nvim-ts-rainbow" -- 配合treesitter，不同括号颜色区分
   
   --  自动补全代码
   use {'neoclide/coc.nvim', branch = 'release'}
@@ -54,6 +52,16 @@ return require('packer').startup(function(use)
         'MunifTanjim/nui.nvim',
     }
 }
+
+-- 语法高亮
+use {
+   'nvim-treesitter/nvim-treesitter',
+    run = function()
+        local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+        ts_update()
+    end,
+}
+use({'p00f/nvim-ts-rainbow'})
 
 if packer_bootstrap then
     require('packer').sync()
