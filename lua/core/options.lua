@@ -45,4 +45,3 @@ vim.api.nvim_exec([[
     autocmd FileType * setlocal autoindent
     autocmd FileType c,cpp setlocal cindent
 ]], false)
-
